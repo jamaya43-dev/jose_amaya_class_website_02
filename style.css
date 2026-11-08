@@ -59,3 +59,111 @@ footer {
     text-align: center;
     padding: 20px;
 }
+.ticker {
+    background-color: #FFFFFF;
+    color: #000000;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 12px 0;
+    font-weight: bold;
+}
+
+.ticker-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+}
+
+.ticker-track span {
+    flex-shrink: 0;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("mid air.jpg");
+    background-size: cover;
+    background-position: center top;
+    animation: heroZoom 12s ease-in-out infinite alternate;
+}
+
+.hero h2 {
+    font-size: clamp(40px, 8vw, 100px);
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+@keyframes heroZoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.15);
+    }
+}
+.featured-video {
+    width: 45%;
+    margin-left: auto;
+    margin-bottom: 30px;
+}
+
+.featured-video video {
+    width: 100%;
+    height: auto;
+    border: 3px solid #B6FF00;
+    border-radius: 10px;
+    display: block;
+}
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+.gallery-item {
+    min-width: 0;
+}
+.site-logo {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
