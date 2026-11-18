@@ -105,7 +105,7 @@ footer {
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-    ), url("mid air.jpg");
+    ), url("midair.jpg");
     background-size: cover;
     background-position: center top;
     animation: heroZoom 12s ease-in-out infinite alternate;
@@ -166,4 +166,165 @@ footer {
     max-width: 100%;
     height: auto;
     margin: 0 auto;
+}
+.video-row {
+    display: flex;
+    gap: 20px;
+    margin: 30px auto;
+    width: 100%;
+}
+
+.video-row .featured-video {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    margin: 0;
+}
+
+.video-row video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background-color: black;
+}
+
+@media (max-width: 700px) {
+    .video-row {
+        flex-direction: column;
+    }
+}
+.video-row .featured-video p {
+    color: #B6FF00;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+.home-story {
+    background-color: #0D0D0D;
+    color: #FFFFFF;
+    padding: 40px;
+    line-height: 1.8;
+}
+
+.home-story h2 {
+    color: #B6FF00;
+    font-size: 32px;
+}
+
+.home-story p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.home-story a {
+    color: #B6FF00;
+    font-weight: bold;
+}
+main h2 {
+    color: #B6FF00;
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+main p {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+main a {
+    color: #B6FF00;
+}
+nav a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+nav a.active {
+    color: #FFFFFF;
+    border-bottom: 2px solid #B6FF00;
+    padding-bottom: 5px;
+}
+@media (max-width: 700px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .home-story {
+        padding: 20px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+}
+nav a:focus-visible,
+main a:focus-visible,
+details summary:focus-visible {
+    outline: 3px solid #B6FF00;
+    outline-offset: 4px;
+}
+.hero h2 {
+    opacity: 0;
+    transform: translateY(40px);
+}
+
+.hero h2.hero-animate {
+    animation: titleReveal 1.5s ease-out forwards;
+}
+
+@keyframes titleReveal {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.gallery-item img {
+    filter: grayscale(100%);
+    transition: filter 0.4s ease, transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+    filter: grayscale(0%);
+}
+.street-ticker {
+    overflow: hidden;
+    background-color: #0D0D0D;
+    padding: 15px 0;
+}
+
+.street-ticker-track {
+    display: flex;
+    width: max-content;
+    animation: streetScroll 15s linear infinite;
+}
+
+.street-ticker span {
+    flex-shrink: 0;
+    color: #B6FF00;
+    font-size: 40px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+@keyframes streetScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
 }
