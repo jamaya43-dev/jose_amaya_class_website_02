@@ -328,3 +328,84 @@ details summary:focus-visible {
         transform: translateX(-50%);
     }
 }
+/* Neon glow for gallery pictures */
+.sports-page .gallery-item img {
+    border: 3px solid #B6FF00;
+    box-shadow: 0 0 10px #B6FF00,
+                0 0 20px rgba(182, 255, 0, 0.4);
+    transition: box-shadow 0.3s ease, filter 0.4s ease, transform 0.3s ease;
+}
+
+.sports-page .gallery-item img:hover {
+    box-shadow: 0 0 20px #B6FF00,
+                0 0 35px rgba(182, 255, 0, 0.7);
+}
+/* Purple neon glow for both videos */
+.sports-page .featured-video video {
+    border: 3px solid #A020F0;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #A020F0,
+                0 0 30px rgba(160, 32, 240, 0.7);
+    box-sizing: border-box;
+}
+/* Venice Skatepark featured video */
+.sports-page .venice-feature {
+    width: 85%;
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.sports-page .venice-feature h2 {
+    color: #B6FF00;
+    margin-bottom: 25px;
+}
+
+.sports-page .venice-feature video {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 4px solid #A020F0;
+    border-radius: 12px;
+    box-shadow: 0 0 15px #A020F0,
+                0 0 35px rgba(160, 32, 240, 0.7);
+}
+
+.sports-page .venice-feature p {
+    color: #B6FF00;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+    .sports-page .venice-feature {
+        width: 95%;
+    }
+}
+/* EYE WORLDZ RADIO */
+.radio-player {
+    background: #111111;
+    border: 3px solid #A020F0;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(160, 32, 240, 0.6);
+    padding: 25px;
+    margin: 40px auto;
+    max-width: 550px;
+    text-align: center;
+}
+
+.radio-player h2 {
+    color: #B6FF00;
+    font-size: 28px;
+}
+
+.radio-player p {
+    color: #FFFFFF;
+    margin: 15px 0;
+}
+
+.radio-player audio {
+    width: 100%;
+    max-width: 450px;
+}
